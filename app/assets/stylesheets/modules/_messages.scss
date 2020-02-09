@@ -6,8 +6,6 @@
    display: flex;
  }
 
-$side__color: #ffffff;
-
 .side {
   color:black;
   height: 100vh;
@@ -28,11 +26,11 @@ $side__color: #ffffff;
       width: 260px;
 
       &__username {
-        color: $side__color;
+        color: $side-color;
         font-size: 16px;
       }
       &__btn {
-        color: $side__color;
+        color: $side-color;
 
         &--edit {
           margin-right: 5px;
@@ -42,7 +40,7 @@ $side__color: #ffffff;
   }
   &__groups {
     background-color: #2f3e51;
-    color: $side__color;
+    color: $side-color;
     height: calc(100vh - 100px);
 
     &__name {
@@ -141,6 +139,7 @@ $side__color: #ffffff;
       width: 100%;
       display: flex;
       padding-left: 10px;
+      font-size: 18px;
       position: relative;
       line-height: 50px;
 
