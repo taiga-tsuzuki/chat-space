@@ -1,0 +1,167 @@
+*{
+  box-sizing: border-box;
+}
+
+ .wrapper {
+   display: flex;
+ }
+
+$side__color: #ffffff;
+
+.side {
+  color:black;
+  height: 100vh;
+  width: 300px;
+
+  &__header {
+    background-color: #253141;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+
+    &__box {
+      display: flex;
+      justify-content: space-between;
+      font-weight: bold;
+      height: 20px;
+      width: 260px;
+
+      &__username {
+        color: $side__color;
+        font-size: 16px;
+      }
+      &__btn {
+        color: $side__color;
+
+        &--edit {
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+  &__groups {
+    background-color: #2f3e51;
+    color: $side__color;
+    height: calc(100vh - 100px);
+
+    &__name {
+      font-size: 15px;
+      height: 15px;
+      width: 260px;
+      padding: 20px 20px 0 20px;
+    }
+
+    &__message {
+      font-size: 11px;
+      height: 11px;
+      width: 260px;
+      padding: 40px 20px;
+    }
+  }
+}
+
+
+
+
+.main {
+  height: 100vh;
+  width: calc(100% - 300px);
+
+  &__header {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    height: 99px;
+    border-bottom: 1px #eeeeee;
+
+    &__groupname {
+      color: #333333;
+      margin: 35px 0 0 40px;
+
+      &__member {
+        color: #999999;
+        margin-top: 15px;
+        font-size: 12px;
+      }
+    }
+
+    &__edit {
+      color: #38aef0;
+      height: 40px;
+      line-height: 40px;
+      padding: 0 20px;
+      margin-top: 30px;
+      border: solid 1px #38aef0;
+      position: absolute;
+      right: 40px;
+      text-decoration: none;
+    }
+  }
+
+  &__comments {
+    background-color: #fafafa;
+    height: calc(100vh - 190px);
+    padding: 35px 40px;
+
+    &__info {
+      display: flex;
+      margin-bottom: 12px;
+
+      &--username {
+        color: #333333;
+        font-size: 16px;
+        font-weight: bold;
+      }
+
+      &--date {
+        color: #999999;
+        font-size: 12px;
+        margin-left: 5px;
+        text-decoration: none;
+      }
+    }
+
+    &__comment {
+      color: #434a54;
+      font-size: 14px;
+      margin-bottom: 46px;
+    }
+  }
+  
+  &__form {
+    background-color: #d2d2d2;
+    height: 90px;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+
+    &__box {
+      background-color: #ffffff;
+      width: 100%;
+      display: flex;
+      padding-left: 10px;
+      position: relative;
+      line-height: 50px;
+
+      &__picture--label {
+        color: black;
+        position: absolute;
+        right: 10px;
+        
+      }
+    }
+
+  &__send {
+    background-color: #38aef0;
+    color: #ffffff;
+    line-height: 50px;
+    padding: 0 20px;
+    margin-left: 15px;
+  }
+  }
+}
+.file {
+  display: none;
+
+}
