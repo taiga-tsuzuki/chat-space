@@ -67,7 +67,7 @@
   width: calc(100% - 300px);
 
   &__header {
-    background-color: $main-background;
+    background-color: $main-color;
     display: flex;
     justify-content: space-between;
     height: 99px;
@@ -135,7 +135,7 @@
     justify-content: space-between;
 
     &__box {
-      background-color: $main-background;
+      background-color: $main-color;
       width: 100%;
       display: flex;
       padding-left: 10px;
