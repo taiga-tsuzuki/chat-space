@@ -145,19 +145,20 @@
 
       &__picture--label {
         color: black;
+        font-size: 25px;
         position: absolute;
         right: 10px;
         
       }
     }
 
-  &__send {
-    background-color: #38aef0;
-    color: $main-color;
-    line-height: 50px;
-    padding: 0 20px;
-    margin-left: 15px;
-  }
+    &__send {
+      background-color: #38aef0;
+      color: $main-color;
+      line-height: 50px;
+      padding: 0 20px;
+      margin-left: 15px;
+    }
   }
 }
 .file {
