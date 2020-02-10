@@ -2,11 +2,11 @@
   .side__header
     .side__header__box
       .side__header__box__username
-        taiga
+        = current_user.name
       .side__header__box__btns
         = link_to'#', class: "side__header__box__btn--edit" do
           = icon('fas','edit', class: "side__header__box__btn")
-        = link_to'#', class: "side__header__box__btn--setting" do
+        = link_to edit_user_path(current_user) do
           = icon('fas', 'cog', class: "side__header__box__btn")
   .side__groups
     .side__groups__name
