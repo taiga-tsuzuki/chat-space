@@ -1,14 +1,12 @@
 .main
   .main__header
     .main__header__groupname
-      taigasグループ
+      = @group.name
       .main__header__groupname__member
-        Member : 
-        taiga
-        ofana
-    .mian__header__edit
-      = link_to'#', class: "main__header__edit" do
-        Edit
+        = "Member : "
+        - @group.users.each do |user|
+          = user.name
+    = link_to 'Edit', edit_group_path(@group), class: "main__header__edit"
   .main__comments
     .main__comments__info
       .main__comments__info--username
@@ -16,15 +14,22 @@
       .main__comments__info--date
         2020/2/7(fry)20:31:42
     .main__comments__comment
-      おはよう
-  .main__form
-    .main__form__box
-      %input(type="text" placeholder="type a message")/
-      .main__form__box__picture
-        %label{class: "main__form__box__picture--label"}
-          = icon('fas', 'image')
-          %input{type: "file", class: "file"}
-    .main__form__send
+      = render @messages
+  -# .main__form
+  -#   .main__form__box
+  -#     %input(type="text" placeholder="type a message")/
+  -#     .main__form__box__picture
+  -#       %label{class: "main__form__box__picture--label"}
+  -#         = icon('fas', 'image')
+  -#         %input{type: "file", class: "file"}
+  -#   .main__form__send
       send
 
-
+  .main__form
+    = form_for [@group, @message] do |f|
+      = f.text_field :content, class: 'main__form__box', placeholder: 'type a message'
+      .main__form__box__picture
+        = f.label :image, class: 'main__form__box__picture--label' do
+          = icon('fas', 'image', class: 'icon')
+          = f.file_field :image, class: 'file'
+      = f.submit 'Send', class: 'form__send'

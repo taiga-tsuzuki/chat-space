@@ -42,15 +42,17 @@
     background-color: #2f3e51;
     color: $side-color;
     height: calc(100vh - 100px);
-
-    &__name {
+    
+    .group__name {
+      color: white;
       font-size: 15px;
       height: 15px;
       width: 260px;
       padding: 20px 20px 0 20px;
     }
 
-    &__message {
+    .group__message {
+      color: white;
       font-size: 11px;
       height: 11px;
       width: 260px;
