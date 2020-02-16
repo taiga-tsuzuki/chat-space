@@ -68,12 +68,14 @@
   height: 100vh;
   width: calc(100% - 300px);
 
+  
   &__header {
     background-color: $main-color;
     display: flex;
     justify-content: space-between;
-    height: 99px;
+    height: 100px;
     border-bottom: 1px #eeeeee;
+    
 
     &__groupname {
       color: #333333;
@@ -103,6 +105,7 @@
     background-color: #fafafa;
     height: calc(100vh - 190px);
     padding: 35px 40px;
+    overflow: scroll;
 
     &__info {
       display: flex;
@@ -129,39 +132,61 @@
     }
   }
   
+  // &__form {
+  //   background-color: #d2d2d2;
+  //   height: 90px;
+  //   padding: 20px 40px;
+  //   display: flex;
+  //   justify-content: space-between;
+
   &__form {
-    background-color: #d2d2d2;
     height: 90px;
     padding: 20px 40px;
-    display: flex;
-    justify-content: space-between;
+    background-color: #d2d2d2;
 
-    &__box {
-      background-color: $main-color;
-      width: 100%;
+    &__new_message {
       display: flex;
-      padding-left: 10px;
-      font-size: 18px;
-      position: relative;
-      line-height: 50px;
 
-      &__picture--label {
-        color: black;
-        font-size: 25px;
-        position: absolute;
-        right: 10px;
-        
+      &__box {
+        height: 50px;
+        width: 100%;
+        padding: 0 40px 0 10px;
+        color: #434a54;
+        border-style: none;
+      }
+
+      &__picture {
+
+        &--label {
+          position: relative;
+
+          .icon {
+            font-size: 25px;
+            position: absolute;
+            top: 12.5px;
+            right: 10px;
+            cursor: pointer;    
+          }
+
+          .file {
+            display: none;
+          }
+        }
+      }
+
+      &__send {
+        width: 100px;
+        height: 50px;
+        padding: 0 30px;
+        margin-left: 15px;
+        background-color: #38aef0;
+        color: white;
+        cursor: pointer;
       }
     }
-
-    &__send {
-      background-color: #38aef0;
-      color: $main-color;
-      line-height: 50px;
-      padding: 0 20px;
-      margin-left: 15px;
-    }
   }
+
+
 }
 .file {
   display: none;
