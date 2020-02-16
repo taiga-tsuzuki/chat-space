@@ -53,7 +53,6 @@ $('#new_message').on('submit', function(e){
   })
   .done(function(data){
     var html = buildHTML(data);
-    $('.main__form__new_message__send').prop('disabled', false);
     $('.main__comments__comment').append(html); 
     $('form')[0].reset();
     $('.main__comments').animate({ scrollTop: $('.main__comments')[0].scrollHeight});
